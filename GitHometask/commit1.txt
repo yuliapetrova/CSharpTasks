@@ -1,2 +1,6 @@
 Commit1.txt changed
+<<<<<<< HEAD
 Merged 
+=======
+Additional commit number1 to "dev" branch
+>>>>>>> de22dd84eba34922312a6941e86bf85b7acc56ad
