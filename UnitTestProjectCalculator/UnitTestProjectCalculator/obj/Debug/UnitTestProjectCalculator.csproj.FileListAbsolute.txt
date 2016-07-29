@@ -1,9 +1,0 @@
-C:\Users\Iuliia_Petrova\Desktop\MentoringNUnit\UnitTestProjectCalculator\UnitTestProjectCalculator\bin\Debug\UnitTestProjectCalculator.dll
-C:\Users\Iuliia_Petrova\Desktop\MentoringNUnit\UnitTestProjectCalculator\UnitTestProjectCalculator\bin\Debug\UnitTestProjectCalculator.pdb
-C:\Users\Iuliia_Petrova\Desktop\MentoringNUnit\UnitTestProjectCalculator\UnitTestProjectCalculator\bin\Debug\Calculator1.dll
-C:\Users\Iuliia_Petrova\Desktop\MentoringNUnit\UnitTestProjectCalculator\UnitTestProjectCalculator\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-C:\Users\Iuliia_Petrova\Desktop\MentoringNUnit\UnitTestProjectCalculator\UnitTestProjectCalculator\bin\Debug\nunit.framework.dll
-C:\Users\Iuliia_Petrova\Desktop\MentoringNUnit\UnitTestProjectCalculator\UnitTestProjectCalculator\bin\Debug\nunit.framework.xml
-C:\Users\Iuliia_Petrova\Desktop\MentoringNUnit\UnitTestProjectCalculator\UnitTestProjectCalculator\obj\Debug\UnitTestProjectCalculator.csprojResolveAssemblyReference.cache
-C:\Users\Iuliia_Petrova\Desktop\MentoringNUnit\UnitTestProjectCalculator\UnitTestProjectCalculator\obj\Debug\UnitTestProjectCalculator.dll
-C:\Users\Iuliia_Petrova\Desktop\MentoringNUnit\UnitTestProjectCalculator\UnitTestProjectCalculator\obj\Debug\UnitTestProjectCalculator.pdb
