@@ -1,0 +1,9 @@
+C:\Users\Iuliia_Petrova\Desktop\TTT\PageObjects\MailTest\bin\Debug\MailTest.dll
+C:\Users\Iuliia_Petrova\Desktop\TTT\PageObjects\MailTest\bin\Debug\MailTest.pdb
+C:\Users\Iuliia_Petrova\Desktop\TTT\PageObjects\MailTest\bin\Debug\nunit.framework.dll
+C:\Users\Iuliia_Petrova\Desktop\TTT\PageObjects\MailTest\bin\Debug\WebDriver.dll
+C:\Users\Iuliia_Petrova\Desktop\TTT\PageObjects\MailTest\bin\Debug\nunit.framework.xml
+C:\Users\Iuliia_Petrova\Desktop\TTT\PageObjects\MailTest\bin\Debug\WebDriver.xml
+C:\Users\Iuliia_Petrova\Desktop\TTT\PageObjects\MailTest\obj\Debug\MailTest.csprojResolveAssemblyReference.cache
+C:\Users\Iuliia_Petrova\Desktop\TTT\PageObjects\MailTest\obj\Debug\MailTest.dll
+C:\Users\Iuliia_Petrova\Desktop\TTT\PageObjects\MailTest\obj\Debug\MailTest.pdb
