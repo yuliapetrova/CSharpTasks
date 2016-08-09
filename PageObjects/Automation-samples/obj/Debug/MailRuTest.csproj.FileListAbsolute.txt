@@ -1,0 +1,3 @@
+C:\Users\Iuliia_Petrova\Desktop\automation-samples net\Automation-samples\bin\Debug\Automation-samples.exe.config
+C:\Users\Iuliia_Petrova\Desktop\automation-samples net\Automation-samples\obj\Debug\Automation-samples.exe
+C:\Users\Iuliia_Petrova\Desktop\automation-samples net\Automation-samples\obj\Debug\Automation-samples.pdb
