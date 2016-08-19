@@ -93,7 +93,6 @@
     <Compile Include="webdriver\pages\PageFactoryPattern\MailPage.cs" />
     <Compile Include="webdriver\tests\MyPageFactoryTestCopy.cs" />
     <Compile Include="webdriver\tests\MyPageFactoryTest.cs" />
-    <Compile Include="webdriver\tests\TestBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

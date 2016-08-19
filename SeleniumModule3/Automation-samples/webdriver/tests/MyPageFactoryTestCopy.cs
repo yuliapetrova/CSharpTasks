@@ -3,30 +3,37 @@ using Automation_samples.webdriver.pages.PageFactoryPattern;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
-using static Automation_samples.webdriver.tests.TestBase;
+using OpenQA.Selenium.Support.UI;
 
 namespace Automation_samples.webdriver.tests
 {
     [TestFixture]
-    [Parallelizable(ParallelScope.Fixtures)]
+    [Parallelizable]
     public class MyPageFactoryTestCopy
     {
+        public static IWebDriver driver;
         private const string LOGIN = "yuliaautotest";
         private const string PASS = "impulse2016";
         private const string ADRESS = "yuliaautotest@mail.ru";
         private const string SUBJECT = "Test";
         private const string BODY = "Hello!";
 
-      [SetUp]
+      [OneTimeSetUp]
         public static void SetupTest()
         {
             DesiredCapabilities capability = DesiredCapabilities.Chrome();
 
             driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), capability);
-
         }
 
         [Test]
+        public void ParallelTest()
+        {
+            GotoLoginPage();
+            LoginTest();
+         }
+
+
         public void GotoLoginPage()
         {
             LoginPage loginPage = new LoginPage(driver);
@@ -34,7 +41,6 @@ namespace Automation_samples.webdriver.tests
             Assert.AreEqual("Вход - Почта Mail.Ru", driver.Title);
         }
 
-        [Test]
         public void LoginTest()
         {
             LoginPage loginPage = new LoginPage(driver);
@@ -42,7 +48,7 @@ namespace Automation_samples.webdriver.tests
             StringAssert.Contains("Входящие - Почта Mail.Ru", driver.Title);
         }
 
-        [Test]
+
         public void VerifyDfafts()
         {
             HomeMailPage homeMailPage = new HomeMailPage(driver);
@@ -53,7 +59,7 @@ namespace Automation_samples.webdriver.tests
             Assert.True(isElementPresent(By.XPath(MailPage.DraftXPAth)), "Draft was not found in Drafts folder!");
         }
 
-        [Test]
+
         public void VerifyDraftContent()
         {
             DraftsPage draftPage = new DraftsPage(driver);
@@ -65,7 +71,7 @@ namespace Automation_samples.webdriver.tests
             driver.SwitchTo().DefaultContent();
         }
 
-        [Test]
+
         public void VerifyDraftDisappeared()
         {
             HomeMailPage homeMailPage = new HomeMailPage(driver);
@@ -74,7 +80,6 @@ namespace Automation_samples.webdriver.tests
             Assert.True(isElementPresent(By.XPath(MailPage.NoDraftXPAth)), "Drafts folder is not emplty!");
         }
 
-        [Test]
         public void VerifySendFolder()
         {
             HomeMailPage homeMailPage = new HomeMailPage(driver);
@@ -83,7 +88,26 @@ namespace Automation_samples.webdriver.tests
             homeMailPage.Logoff();
         }
 
-        [TearDown]
+        public static void wait(Func<IWebDriver, bool> waitAction)
+        {
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
+            wait.Until(waitAction);
+        }
+
+        public static bool isElementPresent(By by)
+        {
+            try
+            {
+                var els = driver.FindElements(by);
+                return els.Count > 0;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        [OneTimeTearDown]
         public static void Teardown()
         {
             driver.Quit();

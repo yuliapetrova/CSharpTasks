@@ -1,7 +1,7 @@
 ﻿using System;
+using Automation_samples.webdriver.tests;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using static Automation_samples.webdriver.tests.TestBase;
 
 namespace Automation_samples.webdriver.pages.PageFactoryPattern
 {
@@ -22,7 +22,7 @@ namespace Automation_samples.webdriver.pages.PageFactoryPattern
         public DraftContentPage OpenDraft()
         {
             Draft.Click();
-            wait(d => d.Title.Contains("Новое письмо"));
+            MyPageFactoryTest.wait(d => d.Title.Contains("Новое письмо"));
             return new DraftContentPage(driver);
         }
     }

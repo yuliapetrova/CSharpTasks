@@ -1,10 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Threading;
+using Automation_samples.webdriver.tests;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.PageObjects;
-using static Automation_samples.webdriver.tests.TestBase;
+
 
 namespace Automation_samples.webdriver.pages.PageFactoryPattern
 {
@@ -49,14 +50,14 @@ namespace Automation_samples.webdriver.pages.PageFactoryPattern
         public DraftsPage OpenDraftsFolder()
         {
             driver.Navigate().GoToUrl("https://e.mail.ru/messages/drafts/");
-            wait(d => d.Title.Contains("Черновики"));
+            MyPageFactoryTest.wait(d => d.Title.Contains("Черновики"));
             return new DraftsPage(driver);
         }
 
         public void OpenSentFolder()
         {
             GotoSentMail.Click();
-            wait(d => d.Title.Contains("Отправленные"));
+            MyPageFactoryTest.wait(d => d.Title.Contains("Отправленные"));
         }
 
         public void SentDraft()
@@ -72,7 +73,7 @@ namespace Automation_samples.webdriver.pages.PageFactoryPattern
         public void SaveDraft()
         {
             SaveDraftButton.Click();
-            wait(d => d.FindElement(By.CssSelector("[data-mnemo=saveStatus]")).Text.Contains("Сохранено в"));
+            MyPageFactoryTest.wait(d => d.FindElement(By.CssSelector("[data-mnemo=saveStatus]")).Text.Contains("Сохранено в"));
         }
 
         public void Logoff()
